@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Path</title>
+</head>
+<body>
+<div align="center"><h1>QR save</h1></div>
+
+<div align="center">
+    {% if user.is_authenticated %}
+    <img src="/media/{{request.user.username}}.png" alt="No image" width="300">
+</div>
+<div align="center">
+    <button class="btn btn-success"><a href="/save_path">Save</a></button>
+</div>
+
+{% endif %}
+
+
+</body>
+</html>
+
+{% endblock %}
